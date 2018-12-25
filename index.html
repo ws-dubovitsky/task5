@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const minValue = +prompt("min = ", "");
+      const maxValue = +prompt("max = ", "");
+
+      array = () => {
+        let array = [];
+        for (let i = minValue; i <= maxValue; i++) {
+          array.push(i);
+        }
+        return array.sort((a, b) => a - b);
+      };
+
+      filterArray = () => {
+        return array()
+          .slice(0)
+          .filter(item => item % 3 === 1);
+      };
+
+      console.log("ARRAY", array());
+      console.log("ARRAY LENGTH", array().length);
+      console.log("FILTER", filterArray());
+    </script>
+  </body>
+</html>
